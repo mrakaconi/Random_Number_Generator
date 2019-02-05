@@ -2,30 +2,38 @@
 
 var niz = [];
 
-function addNumbers (niz) {
-for (i = 0; i < 35; i++) {
-    var add = true;
-    var rng = Math.floor(Math.random() * 48) + 1;
-    for (var y = 0; y <= 45; y++) {
-        if (niz[y] == rng) {
-            add = false;
+function addNumbers(niz) {
+    for (i = 0; i < 35; i++) {
+        var add = true;
+        var rng = Math.floor(Math.random() * 48) + 1;
+        for (var y = 0; y <= 48; y++) {
+            if (niz[y] == rng) {
+                add = false;
+            }
         }
+
+        // postaviti dobijene brojeve u niz
+        if (add) {
+            niz.push(rng)
+        } else {
+            i--;
+        }
+
     }
-
-    // postaviti dobijene brojeve u niz
-    if (add) {
-        niz.push(rng)
-    } else {
-        i--;
-    }
+    var noviNiz = [];
+    for (z = 0; z <= 300; z++)
+        noviNiz.push(niz);
+    console.log(noviNiz);
 }
-}
-addNumbers (niz)
-var noviNiz = new Array(niz);
-console.log(noviNiz);
+
+//Miloske, uspeo sam da postavim sa ovim delom svih 300 iteracija u NIZ ali su mi svi brojevi u svih 300 nizova isti. Muci me kako da namestim da mi za svaki niz vadi jovo na novo random brojeve.
+// Ajde ako ti nije mrsko, proveri kod pa vidi gde mi sta fali ... Hvala !!!
+addNumbers(niz)
 
 
 
-// proveriti niz kojih se sest (6) brojeva najcesce (high drop chance) pojavljuju i postaviti ih u novi niz (high)
-// proveriti niz kojih se sest (6) brojeva redje (medium drop chance) pojavljuju i postaviti ih u novi niz (medium)
-// proveriti niz kojih se sest (6) brojeva najredje (low drop chance)pojavljuju i postaviti ih u novi niz (rare)
+
+
+// proveriti niz kojih se sest (6) brojeva najcesce (high drop chance) pojavljuju i postaviti ih u novi niz (high) i prikazati koliko se puta ponavljaju u 300 iteracija
+// proveriti niz kojih se sest (6) brojeva redje (medium drop chance) pojavljuju i postaviti ih u novi niz (medium) i prikazati koliko se puta ponavljaju u 300 iteracija
+// proveriti niz kojih se sest (6) brojeva najredje (low drop chance)pojavljuju i postaviti ih u novi niz (rare) i prikazati koliko se puta ponavljaju u 300 iteracija
