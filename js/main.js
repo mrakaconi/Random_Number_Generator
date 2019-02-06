@@ -1,34 +1,33 @@
 // Izabrati 35 random brojeva od 48 brojeva
 
 var niz = [];
-
 function addNumbers(niz) {
     for (i = 0; i < 35; i++) {
-        var add = true;
+        var dodajBroj = true;
         var rng = Math.floor(Math.random() * 48) + 1;
         for (var y = 0; y <= 48; y++) {
             if (niz[y] == rng) {
-                add = false;
+                dodajBroj = false;
             }
         }
-
         // postaviti dobijene brojeve u niz
-        if (add) {
+        if (dodajBroj) {
             niz.push(rng)
         } else {
             i--;
         }
-
     }
-    var noviNiz = [];
-    for (z = 0; z <= 300; z++)
-        noviNiz.push(niz);
-    console.log(noviNiz);
 }
 
 //Miloske, uspeo sam da postavim sa ovim delom svih 300 iteracija u NIZ ali su mi svi brojevi u svih 300 nizova isti. Muci me kako da namestim da mi za svaki niz vadi jovo na novo random brojeve.
 // Ajde ako ti nije mrsko, proveri kod pa vidi gde mi sta fali ... Hvala !!!
-addNumbers(niz)
+addNumbers(niz);
+var noviNiz = [];
+for (z = 0; z <= 2; z++)
+    noviNiz.push(niz);
+console.log(noviNiz);
+
+
 
 
 
