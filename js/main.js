@@ -1,7 +1,5 @@
-var b;
-init();
+const niz35 = [];
 function createNiz35() {
-    var niz35 = [];
     i = 0;
     do {
         var rng = Math.floor(Math.random() * 48) + 1;
@@ -15,46 +13,31 @@ function createNiz35() {
 }
 createNiz35();
 
+const nizNizova = [];
 function multiplyNiz(total_number) {
-    var nizNizova = [];
     for (z = 0; z <= total_number; z++) {
         var niz35 = createNiz35();
-
         nizNizova.push(niz35)
     }
     return nizNizova;
 }
-var ukupno_nizova = 40;
+var ukupno_nizova = 4;
 console.log(multiplyNiz(ukupno_nizova));
 
-function init() {
-    for (i = 0; i <= 48; i++) {
-        b[i] = 0
-    }
-}
-// var izvucen_broj;
-// function broj_ponavljanja(createNiz35) {
-//     for (i = 0; i < 35; i++) {
-//         izvucen_broj = createNiz35[i];
-//         b[izvucen_broj] = b[izvucen_broj] + 1;
+
+
+// function ponavljanje_brojeva() {
+//     niz_od_35 = multiplyNiz()
+//     console.log(niz_od_35);
+//     var ponavljanje = [];
+//     for (i = 0; i < 48; i++) {
+//         jedan_clan_niza = niz_od_35[i];
+//         ponavljanje[jedan_clan_niza[i]] = ponavljanje[jedan_clan_niza] + 1;
+//         console.log("broj " + i + " se ponavlja " + jedan_clan_niza[i] + " puta");
+        
 //     }
 // }
-// console.log([izvucen_broj]);
-
-// function print(multiplyNiz) {
-//     for (i = 1; i <= 48; i++) {
-//         console.log("broj " + i + " je izvucen " + multiplyNiz[i] + " puta");
-
-//     }
-// }
-// print(multiplyNiz);
-
-
-
-
-
-
-//     
+// ponavljanje_brojeva()
 
 /*
 ponavljanje[1] = 0
@@ -109,7 +92,7 @@ for (i = 0; i < 35; i++) {
 
 
 
-var ponavljanje = [];
+
 
 ponavljanje[22] = ponavljanje[22]++;
 
