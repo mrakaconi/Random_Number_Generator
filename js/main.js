@@ -21,7 +21,7 @@ function multiplyNiz(total_number) {
   }
   return nizNizova;
 }
-var ukupno_nizova = 10;
+var ukupno_nizova = 100;
 
 function countDuplicates(nizNizova) {
   // Create an array of length 48 where each element is 0;
@@ -37,8 +37,7 @@ function countDuplicates(nizNizova) {
   }
   for (var i = 0; i < brojac.length; i++) { 
       console.log(`Broj ${i + 1} se ponavlja ${brojac[i]} puta;`);
-      if (brojac[i] >= 9){
-      
+      if (brojac[i] >= 80){
       document.write(`Broj ${i + 1} se ponavlja ${brojac[i]} puta; <br>`);
     }
     
