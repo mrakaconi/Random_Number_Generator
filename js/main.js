@@ -1,43 +1,53 @@
-const niz35 = [];
 function createNiz35() {
-    i = 0;
-    do {
-        var rng = Math.floor(Math.random() * 48) + 1;
-        if (!niz35.includes(rng)) {
-            niz35.push(rng);
-            i++;
-        }
+  const niz35 = [];
+  i = 0;
+  do {
+    var rng = Math.floor(Math.random() * 48) + 1;
+    if (!niz35.includes(rng)) {
+      niz35.push(rng);
+      i++;
     }
-    while (i < 35)
-    return niz35
+  }
+  while (i < 35)
+  return niz35
 }
 createNiz35();
 
-const nizNizova = [];
 function multiplyNiz(total_number) {
-    for (z = 0; z <= total_number; z++) {
-        var niz35 = createNiz35();
-        nizNizova.push(niz35)
-    }
-    return nizNizova;
+  var nizNizova = [];
+  for (z = 0; z <= total_number; z++) {
+    var niz35 = createNiz35();
+    nizNizova.push(niz35)
+  }
+  return nizNizova;
 }
-var ukupno_nizova = 4;
-console.log(multiplyNiz(ukupno_nizova));
+var ukupno_nizova = 10;
+
+function countDuplicates(nizNizova) {
+  // Create an array of length 48 where each element is 0;
+  var brojac = Array.from({
+    length: 48
+  }).map(el => 0);
+
+  // Each time a number appear, increase its corresponding counter by 1
+  for (var niz35 of nizNizova) {
+    for (var number of niz35) {
+      brojac[number - 1] = brojac[number - 1] + 1;
+    }
+  }
+  for (var i = 0; i < brojac.length; i++) {
+    console.log(`Broj ${i + 1} se ponavlja ${brojac[i]} puta;`);
+    if (brojac[i] >= 9) {
+      document.write(`Broj ${i + 1} se ponavlja ${brojac[i]} puta; <br>`);
+    }
+  }
+}
+var nizNizova = multiplyNiz(ukupno_nizova);
+countDuplicates(nizNizova);
 
 
 
-// function ponavljanje_brojeva() {
-//     niz_od_35 = multiplyNiz()
-//     console.log(niz_od_35);
-//     var ponavljanje = [];
-//     for (i = 0; i < 48; i++) {
-//         jedan_clan_niza = niz_od_35[i];
-//         ponavljanje[jedan_clan_niza[i]] = ponavljanje[jedan_clan_niza] + 1;
-//         console.log("broj " + i + " se ponavlja " + jedan_clan_niza[i] + " puta");
-        
-//     }
-// }
-// ponavljanje_brojeva()
+
 
 /*
 ponavljanje[1] = 0
