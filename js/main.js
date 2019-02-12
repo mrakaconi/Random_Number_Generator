@@ -35,11 +35,13 @@ function countDuplicates(nizNizova) {
       brojac[number - 1] = brojac[number - 1] + 1;
     }
   }
-  for (var i = 0; i < brojac.length; i++) {
-    console.log(`Broj ${i + 1} se ponavlja ${brojac[i]} puta;`);
-    if (brojac[i] >= 9) {
+  for (var i = 0; i < brojac.length; i++) { 
+      console.log(`Broj ${i + 1} se ponavlja ${brojac[i]} puta;`);
+      if (brojac[i] >= 9){
+      
       document.write(`Broj ${i + 1} se ponavlja ${brojac[i]} puta; <br>`);
     }
+    
   }
 }
 var nizNizova = multiplyNiz(ukupno_nizova);
